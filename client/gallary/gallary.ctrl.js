@@ -1,42 +1,45 @@
 angular.module('app')
-  .controller('gallaryCtrl', ['$scope', '$http', '$interval',
-    function ($scope, $http, $interval) {
-      
-      $scope.photos = [];
+  .controller('gallaryCtrl', ['$scope', '$http', '$interval', '$timeout',
+    function ($scope, $http, $interval, $timeout) {
+
+      $scope.instagram = [];
+      $scope.imgur = [];
       $scope.loading = false;
+      $scope.counter = 10;
+
+      var countDown = function() {
+        $scope.counter--;
+        $timeout(countDown, 1000);
+      };
+
+      $timeout(countDown, 1000);
 
       $interval(function() {
 
-        while ($scope.photos.length !== 0) {
-          $scope.photos.pop();
+        var mytimeout = $timeout($scope.onTimeout,1000);
+
+        $http.get('/imgur').success(function (data) {
+          for (var j = 0; j < 3; j+=1) {
+            $scope.imgur.push({url:data.data[j].link});
+          }
+          console.log($scope.imgur);
+        });
+
+        while ($scope.instagram.length !== 0 && $scope.imgur !== 0) {
+          $scope.instagram.pop();
+          $scope.imgur.pop();
         }
 
         $http.get('/instagram').success(function (data) {
           
-          for (var i = 0; i < 5; i+=1) {
-            $scope.photos.push(data.data[i].user);
-            $scope.photos.push(data.data[i].images.low_resolution);
+          for (var i = 0; i < 6; i+=1) {
+            $scope.instagram.push(data.data[i].user);
+            $scope.instagram.push(data.data[i].images.low_resolution);
           }
+          $scope.counter = 10;
           $scope.loading = true;
         });
 
-        $http.get('/imgur').success(function (data) {
-          for (var j = 0; j < 3; j+=1) {
-            $scope.photos.push({url:data.data[j].link});
-          }
-          console.log($scope.photos);
-        });
+    }, 10000);
 
-    }, 5000);
-
-      
-
-    //   $interval(function() { 
-    //     $http.get('/instagram').success(function (data) {
-    //       for (var i = 0; i < 5; i+=1) {
-    //         $scope.photos.push(data.data[i].user);
-    //         $scope.photos.push(data.data[i].images.low_resolution);
-    //       }
-    //     });
-    // }, 5000);
 }]);

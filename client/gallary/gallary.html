@@ -1,18 +1,26 @@
 <div ng-include="'nav/nav.html'"></div>
-{{sorry}}
-<!-- <span data-ng-hide="loading">
- 
- </span> -->
-  
+  <div>Random pictures from Instgram and Imgur(meme section)</div>
+  <div> new photos in {{counter}} </div>
  <div class="load" ng-hide="loading" >
    <i class="fa fa-spinner fa-spin"></i>
-    loading.. Some photos are <span>NSFW!</span>
+    loading.. Warning some photos are <span>NSFW!</span>
  </div>
 
-<div class="photo" ng-repeat="photo in photos track by $index"  >
-  <img src="{{photo.url}}" >
-    <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12  text-center" ng-repeat="photo in instagram track by $index">
+      <img src="{{photo.url}}" class="photo">
+        <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
+    </div> 
+
+    <div class="col-xs-12  text-center" ng-repeat="photo in imgur track by $index">
+      <img src="{{photo.url}}" class="photo imgur">
+        <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
+    </div>    
+
+  </div>
 </div>
+
 
 
 
