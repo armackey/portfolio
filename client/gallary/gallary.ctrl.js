@@ -1,7 +1,10 @@
 angular.module('app')
-  .controller('gallaryCtrl', ['$scope', '$http', '$interval', '$timeout',
-    function ($scope, $http, $interval, $timeout) {
-
+  .controller('gallaryCtrl', ['$scope', '$http', '$interval', '$timeout', '$anchorScroll',
+    function ($scope, $http, $interval, $timeout, $anchorScroll) {
+      $scope.scrollTo = function(id){
+        $location.hash(id);
+        $anchorScroll();
+      };
       $scope.instagram = [];
       $scope.imgur = [];
       $scope.loading = false;
@@ -15,7 +18,7 @@ angular.module('app')
       $timeout(countDown, 1000);
 
       $interval(function() {
-
+        $scope.counter = 11;
         var mytimeout = $timeout($scope.onTimeout,1000);
 
         $http.get('/imgur').success(function (data) {
@@ -36,7 +39,7 @@ angular.module('app')
             $scope.instagram.push(data.data[i].user);
             $scope.instagram.push(data.data[i].images.low_resolution);
           }
-          $scope.counter = 10;
+          
           $scope.loading = true;
         });
 
