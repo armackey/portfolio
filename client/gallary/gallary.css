@@ -1,6 +1,13 @@
+div .load {
+  text-align: center;
+}
+
 .photo {
   display: inline-block;
   border: 2px solid white;
 }
 
-
+div > span {
+  color: red;
+  font-size: 40px;
+}
