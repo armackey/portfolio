@@ -1,5 +1,5 @@
 angular.module('app', ['ui.router'])
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
       .state('home', {
         url: '/',
@@ -12,7 +12,8 @@ angular.module('app', ['ui.router'])
       })
       .state('gallary', {
         url: '/gallary',
-        templateUrl: 'partials/gallary.html'
+        templateUrl: 'gallary/gallary.html',
+        controller: 'gallaryCtrl'
       })
       .state('contact', {
         url: '/contact',
@@ -26,6 +27,7 @@ angular.module('app', ['ui.router'])
         url: '/404',
         templateUrl: 'partials/404.html'
       });
-
+      
+      $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
   });

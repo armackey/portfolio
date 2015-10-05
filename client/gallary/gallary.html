@@ -1,0 +1,19 @@
+<div ng-include="'nav/nav.html'"></div>
+{{loading}}
+<div class="photo" ng-repeat="photo in photos track by $index">
+  <img src="{{photo.url}}" >
+    <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
+</div>
+
+
+
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      <!-- front content -->
+    </div>
+    <div class="back">
+      <!-- back content -->
+    </div>
+  </div>
+</div>
