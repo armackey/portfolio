@@ -27,33 +27,36 @@
 
  </div>
 
+
+
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-xs-12  text-center flip-container" ontouchstart="this.classList.toggle('hover');" ng-repeat="photo in instagram track by $index">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 text-center photos">
+      <div ng-repeat="photo in instagram track by $index" ng-class="{'flipper': photo.flipped}">
 
-      <div class="flipper">
-        <div class="front">
-          <img ng-src="{{photo.url}}" class="photo">
-            <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
-        </div> 
-        <div class="back">
-          
+        <div class="flip-container">
+
+          <div class="flipper" >
+
+              <div  class="front">
+                <img  ng-src="{{photo.url}}" class="photo">
+                  <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} 
+                  </a>
+              </div> 
+
+            <div class="back">
+              <div ng-repeat="photo in imgur track by $index">
+                    <img ng-src="{{photo.url}}" class="photo imgur">
+                      <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} 
+                      </a>
+              </div>        
+            </div>
+
+          </div>
+
         </div>
-      </div>
 
-    </div>
-
-    <div class="col-xs-12  text-center flip-container" ontouchstart="this.classList.toggle('hover');" ng-repeat="photo in imgur track by $index">
-
-      <div class="flipper">
-        <div class="front">
-          <img ng-src="{{photo.url}}" class="photo imgur">
-            <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
-        </div> 
-        <div class="back">
-          
-        </div>
       </div>
 
     </div>
@@ -61,5 +64,18 @@
 </div>
 
 
-
+<!-- 
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+  <div class="flipper">
+    <div class="front">
+      
+      front
+    </div>
+    <div class="back">
+      
+      back
+    </div>
+  </div>
+</div>
+ -->
 
