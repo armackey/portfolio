@@ -13,6 +13,10 @@ div .load {
   border: 2px solid white;  
 }
 
+.img-center {
+  margin: 0 auto;
+}
+
 .top-gallary {
   top: 60px;
   position: relative;
@@ -37,9 +41,9 @@ div > span {
 }
 
 
-/*.flip-container:hover .flipper, .flip-container.hover .flipper {
+.flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateY(180deg);
-}*/
+}
 /* front pane, placed above back */
 .front {
   z-index: 2;
@@ -79,9 +83,13 @@ div > span {
   animation: flip 2s linear;
   /*animation: back-flip 1s;*/
   -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
   -moz-transform-style: preserve-3d;
+  -moz-transition: 0.6s;
   -o-transform-style: preserve-3d;
+  -o-transition: 0.6s;
   transform-style: preserve-3d;
+  transition: 0.6s;
   position: relative;
 }
 

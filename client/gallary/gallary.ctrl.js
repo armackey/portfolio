@@ -38,14 +38,14 @@ angular.module('app')
         }
 
         $http.get('/imgur').success(function (data) {
-          for (var j = 0; j < 5; j+=1) {
+          for (var j = 0; j < 1; j+=1) {
             $scope.imgur.push({url: data.data[j].link, flipped: false});
           }
           console.log($scope.imgur);
         });
 
         $http.get('/instagram').success(function (data) {
-          for (var i = 0; i < 10; i+=1) {
+          for (var i = 0; i < 9; i+=1) {
             var randomNum = Math.floor(Math.random()* 10 + 1);
             $scope.instagram.push({username: data.data[i].user.username, flipped: false, url: data.data[i].images.low_resolution.url});
               // selects random photo
@@ -53,7 +53,6 @@ angular.module('app')
                 console.log(i, 'i am i');
                 (function (index) {
                   $timeout(function() {
-                    console.log(index, ' i am index');
                     $scope.instagram[index].flipped = true;
                     $scope.instagram[index + 4].flipped = true;
                     $scope.instagram[index - 2].flipped = true;  

@@ -1,6 +1,5 @@
 body {
   background-color: #1C1C20;
-  
   color: white;
 } 
 
@@ -16,6 +15,7 @@ h1 span {
   border-top: 5px white solid;
   border-bottom: 5px white solid;
   text-align: center;
+
 }
 .technologies {
   padding-top: 8px;
