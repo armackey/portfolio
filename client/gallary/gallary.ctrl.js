@@ -10,7 +10,7 @@ angular.module('app')
       $scope.instagram = [];
       $scope.imgur = [];
       $scope.loading = false;
-      $scope.counter = 10;
+      $scope.counter = 8;
 
       var countDown = function() {
         $scope.counter--;
@@ -20,7 +20,7 @@ angular.module('app')
       $timeout(countDown, 1000);
 
       $interval(function() {
-        $scope.counter = 11;
+        $scope.counter = 8;
         var mytimeout = $timeout($scope.onTimeout, 1000);
 
         while ($scope.instagram.length !== 0 && $scope.imgur !== 0) {
@@ -29,9 +29,10 @@ angular.module('app')
         }
 
         $http.get('/imgur').success(function (data) {
-          for (var j = 0; j < 1; j+=1) {
-            $scope.imgur.push({url: data.data[j].link, flipped: false});
-          }
+          // for (var j = 0; j < 1; j+=1) {
+            var randomNum = Math.floor(Math.random()* 10 + 1);
+            $scope.imgur.push({url: data.data[randomNum].link, flipped: false});
+          // }
           console.log($scope.imgur);
         });
 
@@ -41,7 +42,6 @@ angular.module('app')
             $scope.instagram.push({username: data.data[i].user.username, flipped: false, url: data.data[i].images.low_resolution.url});
               // selects random photo
               if (i === randomNum) {
-                console.log(i, 'i am i');
                 (function (index) {
                   $timeout(function() {
                     $scope.instagram[index].flipped = true;
@@ -53,12 +53,12 @@ angular.module('app')
               }
               
           }
-          console.log($scope.instagram);
+          
         });
 
 
         $scope.loading = true;
-    }, 10000);
+    }, 8000);
         
         // while ($scope.instagram.length !==0) {
         //   console.log('hello');
