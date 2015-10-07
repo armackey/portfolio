@@ -9,9 +9,12 @@ angular.module('app')
       $location.hash(id);
       $anchorScroll();
     };
+    $scope.clickMe = function() {
+      $location.url('https://medium.com/@ARMackey');
+    };
 
-    $scope.skills = [{type:'Javascript', num:80, color:'#FFA25E'}, {type:'CSS3', num:80, color:'#5FFFAD'}, 
-                    {type:'HTM5', num:95, color:'#BD73FF'}, {type:'Node', num:75, color:'#FF4A00'},
-                    {type:'Database', num:75, color:'#007D5B'}, {type:'Cool-ness', num:99, color:'#A11000' }];
+    $scope.skills = [{type:'Javascript', num:80, color:'#FFA25E'}, {type:'jQuery', num:80, color:'#5FFFAD'}, 
+                    {type:'CSS3/HTLM5', num:95, color:'#BD73FF'}, {type:'Node/Express', num:75, color:'#FF4A00'},
+                    {type:'SQL/NoSQL', num:75, color:'#007D5B'}, {type:'Awesome', num:99, color:'#A11000' }];
 
   }]);

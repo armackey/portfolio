@@ -20,7 +20,7 @@
 
               <li ng-class="{active4: isActive('/gallary')}"><a ui-sref="gallary">api gallary </a>
               </li>
-
+              <li class="github"> <a href="https://github.com/armackey"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="github logo"></a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -29,237 +29,61 @@
 
 
 <p id="top"></p>
-<div id="name">
+<div id="about">
   Allen Mackey
 </div>
 <h1>
   <span>Full-Stack Software Engineer</span>
 </h1>
 
-<div class="intro">
-  Here's a joke! What's Javascript's favorite ice-cream? Vanilla! Get it? Or do you <i> Git </i> it?
+<div class="container">
+  <div class="row">
+    <h3 class="intro text-center" >About Me</h3>
+    <div class="intro col-sm-4 col-md-4">
+      <p>Thanks for checking out my page. As a token of my gratitude, here's a joke! What's Javascript's favorite ice-cream? Vanilla! Get it? Or do you <i> Git </i> it? Hilarious, right? Okay, in all seriousness, I have a passion for programming and frozen yogurt.</p>
+    </div>   
+    <div class=" intro col-sm-4 col-md-4">
+      <p>I originally got into programming because of an idea I had sometime ago. It's based off the web moving in real time. That's when I found WebRTC. Every article surrounding it mentioned Javascript. Since then, Javascript and I have become an <span>object </span> item.</p>
+    </div> 
+    <div class="intro col-sm-4 col-md-4">
+      <p>Javascript and I may have something special but I can't allow her to limit my potential. That's why I celebrate the student mentality. Staying curious and continuing to learn. Php is next!</p>
+    </div>
+  </div>
 </div>
+
 
 <div class="container">
   <div class="row">
-    <div  ng-repeat="skill in skills">
-      <div class="col-xs-6 col-sm-4 col-md-4 text-center">
-        <div class="skills">{{skill.num}}% <br>   {{skill.type}}
+    <div id="circular-skills">
+      <div  ng-repeat="skill in skills">
+        <div class="col-xs-6 col-sm-4 col-md-4 text-center">
+          <div class="skills">{{skill.num}}% <br>   {{skill.type}}
+          </div>
+          <circular-progress
+              value="skill.num"
+              max="100"
+              orientation="1"
+              radius="80"
+              stroke="5"
+              base-color="#95DBD0"
+              progress-color="{{skill.color}}"
+              iterations="100"
+              animation="easeInOutCubic"
+          ></circular-progress>
+
+
         </div>
-        <circular-progress
-            value="skill.num"
-            max="100"
-            orientation="1"
-            radius="80"
-            stroke="5"
-            base-color="#95DBD0"
-            progress-color="{{skill.color}}"
-            iterations="100"
-            animation="easeInOutCubic"
-        ></circular-progress>
-
-
-      </div>
-    </div>    
+      </div> 
+    </div>   
   </div>
 </div>
 
+<div id="blogs">
+  <p>Enjoy reading and don't mind programming obsession? Then checkout my blog!</p>
+  <a ng-href="https://medium.com/@ARMackey"><img src="http://static1.squarespace.com/static/535166e1e4b095a1b0b3bfca/t/54501daee4b0fc25c59d9fa7/1414536623224/" alt="medium logo"></a>
+</div>
 
-
-<!--   <div>80% JS</div>
-  <circular-progress
-      value="80"
-      max="100"
-      orientation="1"
-      radius="80"
-      stroke="20"
-      baseColor="#a2a2a2"
-      progressColor="#ca2014"
-      iterations="100"
-      animation="easeInOutCubic"
-  ></circular-progress>
+<div id="contact">
+  <p>You made it this far! WOOT!! WOOT!! Yes, I am for hire! Feel free to contact me at anytime. My email address is mackey91@gmail.com and resume will be sent by request. Thank you!</p>
+</div>
   
-
-  <div>80% CSS3</div>
-    <circular-progress
-      value="50"
-      max="100"
-      orientation="1"
-      radius="80"
-      stroke="20"
-      baseColor="#a2a2a2"
-      progressColor="#ca2014"
-      iterations="100"
-      animation="easeInOutCubic"
-  ></circular-progress>
-
-  <div>95% HTML5</div>
-    <circular-progress
-      value="50"
-      max="100"
-      orientation="1"
-      radius="80"
-      stroke="20"
-      baseColor="#a2a2a2"
-      progressColor="#ca2014"
-      iterations="100"
-      animation="easeInOutCubic"
-  ></circular-progress>
-
-    <div>75% Node</div>
-    <circular-progress
-      value="50"
-      max="100"
-      orientation="1"
-      radius="80"
-      stroke="20"
-      baseColor="#a2a2a2"
-      progressColor="#ca2014"
-      iterations="100"
-      animation="easeInOutCubic"
-  ></circular-progress>
-
-    <div>100% Personality</div>
-    <circular-progress
-      value="50"
-      max="100"
-      orientation="1"
-      radius="80"
-      stroke="20"
-      baseColor="#a2a2a2"
-      progressColor="#ca2014"
-      iterations="100"
-      animation="easeInOutCubic"
-  ></circular-progress> -->
-
-
-
-<!-- <div class="container text-center technologies">
-  <div class="row">
-    <div class="col-md-3 col-sm-3 col-xs-3">
- 
-      <p>Javascript</p>
-      <p>Angular</p>
-      <p>HTML5</p>
-    </div>
-    <div class="col-md-3 col-sm-3 col-xs-3">
-      <p>React</p>
-      <p>Node</p>
-      <p>NoSQL</p>
-    </div>
-
-    <div class="col-md-3 col-sm-3 col-xs-3">
-        <p>jQuery</p>
-        <p>CSS</p>
-        <p>Bootstrap</p>
-    </div>
-
-    <div class="col-md-3 col-sm-3 col-xs-3">
-        <p>Express</p>
-        <p>SQL</p>
-        <p>Gulp</p>
-    </div>
-
-    
-  </div>
-</div> -->
-
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<div id="about">about section</div>
-  <p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<div id="blogs">blogs section</div>
-  <p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<div id="contact">contact section</div>
-  <p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
-<p>...</p>
