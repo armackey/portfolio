@@ -1,4 +1,4 @@
- <div class="container">
+ 
 
       <!-- Static navbar -->
       <nav >
@@ -26,7 +26,7 @@
         </div><!--/.container-fluid -->
       </nav>
 
-</div>
+
 
 <p id="top"></p>
 <div id="name">
@@ -37,10 +37,104 @@
 </h1>
 
 <div class="intro">
-  I absolutely adore Javascript. Here's a list of the current technology that I use. Not in any particular order.
+  Here's a joke! What's Javascript's favorite ice-cream? Vanilla! Get it? Or do you <i> Git </i> it?
 </div>
 
-<div class="container text-center technologies">
+<div class="container">
+  <div class="row">
+    <div  ng-repeat="skill in skills">
+      <div class="col-xs-6 col-sm-4 col-md-4 text-center">
+        <div class="skills">{{skill.num}}% <br>   {{skill.type}}
+        </div>
+        <circular-progress
+            value="skill.num"
+            max="100"
+            orientation="1"
+            radius="80"
+            stroke="5"
+            base-color="#95DBD0"
+            progress-color="{{skill.color}}"
+            iterations="100"
+            animation="easeInOutCubic"
+        ></circular-progress>
+
+
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+
+<!--   <div>80% JS</div>
+  <circular-progress
+      value="80"
+      max="100"
+      orientation="1"
+      radius="80"
+      stroke="20"
+      baseColor="#a2a2a2"
+      progressColor="#ca2014"
+      iterations="100"
+      animation="easeInOutCubic"
+  ></circular-progress>
+  
+
+  <div>80% CSS3</div>
+    <circular-progress
+      value="50"
+      max="100"
+      orientation="1"
+      radius="80"
+      stroke="20"
+      baseColor="#a2a2a2"
+      progressColor="#ca2014"
+      iterations="100"
+      animation="easeInOutCubic"
+  ></circular-progress>
+
+  <div>95% HTML5</div>
+    <circular-progress
+      value="50"
+      max="100"
+      orientation="1"
+      radius="80"
+      stroke="20"
+      baseColor="#a2a2a2"
+      progressColor="#ca2014"
+      iterations="100"
+      animation="easeInOutCubic"
+  ></circular-progress>
+
+    <div>75% Node</div>
+    <circular-progress
+      value="50"
+      max="100"
+      orientation="1"
+      radius="80"
+      stroke="20"
+      baseColor="#a2a2a2"
+      progressColor="#ca2014"
+      iterations="100"
+      animation="easeInOutCubic"
+  ></circular-progress>
+
+    <div>100% Personality</div>
+    <circular-progress
+      value="50"
+      max="100"
+      orientation="1"
+      radius="80"
+      stroke="20"
+      baseColor="#a2a2a2"
+      progressColor="#ca2014"
+      iterations="100"
+      animation="easeInOutCubic"
+  ></circular-progress> -->
+
+
+
+<!-- <div class="container text-center technologies">
   <div class="row">
     <div class="col-md-3 col-sm-3 col-xs-3">
  
@@ -68,7 +162,7 @@
 
     
   </div>
-</div>
+</div> -->
 
 <p>...</p>
 <p>...</p>

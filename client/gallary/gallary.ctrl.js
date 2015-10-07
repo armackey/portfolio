@@ -6,17 +6,8 @@ angular.module('app')
       // randomly select a photo to be flipped
       // set flipped to true
       // if flipped is true don't flip
-      // 
-
       
-      
-      $scope.scrollTo = function(id){
-        $location.hash(id);
-        $anchorScroll();
-      };
-
       $scope.instagram = [];
-
       $scope.imgur = [];
       $scope.loading = false;
       $scope.counter = 10;
@@ -28,7 +19,7 @@ angular.module('app')
 
       $timeout(countDown, 1000);
 
-      // $interval(function() {
+      $interval(function() {
         $scope.counter = 11;
         var mytimeout = $timeout($scope.onTimeout, 1000);
 
@@ -67,7 +58,7 @@ angular.module('app')
 
 
         $scope.loading = true;
-    // }, 6000);
+    }, 10000);
         
         // while ($scope.instagram.length !==0) {
         //   console.log('hello');

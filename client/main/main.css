@@ -1,21 +1,40 @@
+.skills {
+  position: relative;
+  top: 110px;
+  text-align: center;
+}
+
 body {
   background-color: #1C1C20;
   color: white;
 } 
 
 nav {
+  z-index: 2;
   position: fixed;
+  top: 5px;
+  height: 55px;
+  background: #1C1C20;
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+  opacity: .9;
 }
 h1 span {
   color:#FFA25E;
+  position: relative;
+  top: 70px;
 }
+
+
 
 #name {
   font-size: 60px;
   border-top: 5px white solid;
   border-bottom: 5px white solid;
   text-align: center;
-
+  position: relative;
+  top: 80px;
 }
 .technologies {
   padding-top: 8px;
@@ -25,6 +44,7 @@ h1 span {
 .container {
   padding-bottom: 40px;
 }
+
 ul li {
   display: inline-block;
   margin: 5px;
@@ -37,8 +57,9 @@ ul li {
 
 .intro {
   font-size: 18px;
+  position: relative;
+  top: 70px;
 }
-
 
 
 .navvy > li > a,
