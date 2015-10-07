@@ -18,7 +18,7 @@ router.get('/imgur', function (req, res) {
 });
  
 router.get('/instagram', function (req, res) {
-  request('https://api.instagram.com/v1/tags/nofilter/media/recent?client_id=' + config.instagramApi.Key,
+  request('https://api.instagram.com/v1/tags/landscape/media/recent?client_id=' + config.instagramApi.Key,
     function (error, response, body) {
         res.send(body);  
   });
