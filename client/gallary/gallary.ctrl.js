@@ -19,7 +19,7 @@ angular.module('app')
 
       $timeout(countDown, 1000);
 
-      // $interval(function() {
+      $interval(function() {
         $scope.counter = 8;
         var mytimeout = $timeout($scope.onTimeout, 1000);
 
@@ -58,7 +58,7 @@ angular.module('app')
 
 
         $scope.loading = true;
-    // }, 8000);
+    }, 8000);
         
         // while ($scope.instagram.length !==0) {
         //   console.log('hello');
