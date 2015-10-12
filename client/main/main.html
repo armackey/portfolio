@@ -12,10 +12,15 @@
               <li ng-click="scrollTo('about')" ng-class="{active2: isActive('/')}"><a>about</a>
               </li>
 
+
+
               <li ng-click="scrollTo('blogs')" ng-class="{active3: isActive('/')}"><a>blogs</a>
               </li>
 
-              <li ng-click="scrollTo('contact')" ng-class="{active5: isActive('/')}"><a>contact</a>
+              <li ng-click="scrollTo('contact')" ng-class="{active6: isActive('/')}"><a>contact</a>
+              </li>
+
+              <li ng-click="scrollTo('my-work')" ng-class="{active5: isActive('/')}"><a>apps</a>
               </li>
 
               <li ng-class="{active4: isActive('/gallary')}"><a ui-sref="gallary">api gallery </a>
@@ -39,7 +44,7 @@
 
 <div class="container">
   <div class="row">
-    <h3 class="intro text-center" >About Me</h3>
+    <h3 class="intro text-center" >'insert clever title'</h3>
     <div class="intro col-sm-4 col-md-4">
       <p>Thanks for checking out my page. As a token of my gratitude, here's a joke! What's Javascript's favorite ice-cream? Vanilla! Get it? Or do you <i> Git </i> it? Hilarious, right? Okay, in all seriousness, I have a passion for programming and frozen yogurt.</p>
     </div>   
@@ -65,7 +70,7 @@
               max="100"
               orientation="1"
               radius="80"
-              stroke="5"
+              stroke="7"
               base-color="#95DBD0"
               progress-color="{{skill.color}}"
               iterations="100"
@@ -80,8 +85,41 @@
 </div>
 
 <div id="blogs">
-  <p>Enjoy reading and don't mind programming obsession? Then checkout my blog!</p>
+  <p>Enjoy reading and don't mind programming obsession? Then check out my blog!</p>
   <a ng-href="https://medium.com/@ARMackey"><img src="http://static1.squarespace.com/static/535166e1e4b095a1b0b3bfca/t/54501daee4b0fc25c59d9fa7/1414536623224/" alt="medium logo"></a>
+</div>
+
+<div id="my-work">
+  <p>What Have I Done?</p>
+  <div class="container">
+    <div class="row">
+      
+        
+        <div class="my-apps">
+
+          <div class="col-sm-4 col-md-4 col-xs-12 text-center">    
+            <p>MapSnap</p>
+            <a href="https://stormy-oasis-6824.herokuapp.com/"><img class="img-responsive center-block"  src="../images/mapsnap2.png"  alt="MapSnap-app"></a>
+          </div> 
+
+          
+          <div class="col-sm-4 col-md-4 col-xs-12 text-center">  
+            <p>Freeday</p>
+            <a href="https://github.com/Team-Man-O-War/freeday"><img class="img-responsive center-block" src="../images/freeday.png"  alt="freeday-app"></a>
+            <span><p>Coming soon!</p></span>
+          </div> 
+          
+
+          
+          <div class="col-sm-4 col-md-4 col-xs-12 text-center">
+            <p>Video Dates</p>
+             <a ><img class="img-responsive center-block" src="../images/blnk.png" alt=""></a>
+            <span><p>Coming soon!</p></span>
+          </div> 
+          
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="contact" >

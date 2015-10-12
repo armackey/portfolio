@@ -16,7 +16,7 @@
 
   <div class="top-gallary">
 
-      <h4>These are RANDOM pictures from Instgram and Imgur <br>
+      <h4>These are RANDOM pictures from Instagram (#pets) and Imgur <br>
         new photos in {{counter}}
       </h4>
     
@@ -32,7 +32,7 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-xs-10 col-sm-4 col-md-4 col-lg-4 text-center photos" ng-repeat="photo in instagram track by $index" ng-class="{'flipper': photo.flipped}">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center photos" ng-repeat="photo in instagram track by $index" ng-class="{'flipper': photo.flipped}">
 
         <div class="flip-container">
 
@@ -59,40 +59,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- 
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
-      
-      front
-    </div>
-    <div class="back">
-      
-      back
-    </div>
-  </div>
-</div>
- -->
-
-
-<!--    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center photos" ng-repeat="photo in instagram track by $index" ng-class="{'flipper': photo.flipped}">
-
-
-   <div class="flip-container" >
-
-     <div class="flipper" >
-       <div  class="front">
-         
-         <img  ng-src="{{photo.url}}" class="photo"/>
-           <a ng-href="https://instagram.com/{{photo.username}}"> {{photo.username}} </a>
-
-       </div> 
-       <div class="back">
-         <div>hi there!</div>
-       </div>
-     </div>
-   </div>
- </div>
- -->
