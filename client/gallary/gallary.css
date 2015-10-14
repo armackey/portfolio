@@ -9,6 +9,10 @@ div .load {
   height: 320px;
 }
 
+/*jquery 
+javascript 
+angular*/
+
 .photo {
   border: 2px solid white;  
 }
@@ -39,6 +43,36 @@ div > span {
     -webkit-transform: rotateY(0deg);
   }
 }
+
+@-moz-keyframes flip {
+  from {
+    -moz-transform: rotateY(-180deg);
+  }
+  to {
+    -moz-transform: rotateY(0deg);
+  }
+}
+
+
+@-o-keyframes flip {
+  from {
+    -o-transform: rotateY(-180deg);
+  }
+  to {
+    -o-transform: rotateY(0deg);
+  }
+}
+
+
+@-keyframes flip {
+  from {
+    transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
 
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {

@@ -16,7 +16,7 @@ angular.module('app')
         $scope.counter--;
         $timeout(countDown, 1000);
       };
-
+        
       $timeout(countDown, 1000);
 
       $interval(function() {
