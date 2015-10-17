@@ -9,8 +9,18 @@ angular.module('app')
       $location.hash(id);
       $anchorScroll();
     };
-    $scope.clickMe = function() {
-      $location.url('https://medium.com/@ARMackey');
+    // $scope.clickMe = function() {
+    //   $location.url('https://medium.com/@ARMackey');
+    // };
+
+    $scope.isPopped = false;
+
+    $scope.openPop = function () {
+      $scope.isPopped = true;
+    };
+
+    $scope.closePop = function () {
+      $scope.isPopped = false;
     };
 
     $scope.skills = [{type:'Javascript', num:80, color:'#FFA25E'}, {type:'jQuery', num:80, color:'#5FFFAD'}, 

@@ -6,7 +6,7 @@
   #my-work {
     position: relative;
     width: 100%;
-    height:835px;
+    height: 1200px;
     background: white;
   }  
   /*images*/
@@ -14,40 +14,73 @@
     width: 300px;
     height: 200px;
     position: relative;
-    padding: 12px;
+    padding: 0px;
     margin: 0 auto;
     top: 20px;
+    border: 2px solid black;
   }
 
   /*text*/
-  .my-apps > div > p{
+  .my-apps > div > p {
     position: relative;
     top: 40px;
     font-family: 'Raleway',sans-serif; 
     font-size: 23px; 
     font-weight: 800;
+    padding-bottom: 5px;
   }
-  /*not deployed*/
+  /*coming soon*/
   .my-apps > div > span > p{
     position: relative;
-    top: 10px;
+    top: 20px;
     color: black;
     font-size: 16px;
     font-weight: none;
   }
+
+  /*pop ups*/
+  .popped {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 200px;
+    border: 4px solid black;
+  }
+  .mocks {
+    width: 280px;
+    height: 200px;
+    border: 2px solid black;
+  }
+  
+  .mock-ups > div > div > img {
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+    cursor: pointer;
+  }
+
+  .mock-ups > h2 {
+    position: relative;
+    top: 20px;
+  }
+
+  .blur {
+    -webkit-filter: blur(6px);
+    -mox-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    background: #000000;
+    opacity: 0.7px;
+  }
 }
 
-/* Extra Small Devices, Phones */ 
+ /*Extra Small Devices, Phones  */
 @media only screen and (min-width : 480px) {
 
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
   #my-work {
     position: relative;
     width: 100%;
-    height:600px;
+    height:1290px;
     background: white;
   }
 
@@ -56,9 +89,10 @@
     width: 300px;
     height: 200px;
     position: relative;
-    padding: 12px;
-    margin: 0 auto;
+    padding: 0px;
+    /*margin: 0 auto;*/
     top: 50px;
+    border: 2px solid black;
   }
 
 
@@ -71,24 +105,196 @@
     font-weight: 800;
   }
 
-    /*not deployed*/
-    .my-apps > div > span > p{
-      position: relative;
-      top: 45px;
-      color: black;
-      font-size: 16px;
-      font-weight: none;
-    }
+    /*coming soon*/
+  .my-apps > div > span > p {
+    position: relative;
+    top: 50px;
+    color: black;
+    font-size: 16px;
+    font-weight: none;
   }
+
+  .mock-ups > div > div > img {
+    font-weight: bold;
+    position: relative;
+    top: 70px;
+    cursor: pointer;
+  }
+
+  .mock-ups > h2 {
+    position: relative;
+    top: 60px;
+  }
+
+  .blur {
+    -webkit-filter: blur(6px);
+    -mox-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    background: #000000;
+    opacity: 0.7px;
+  }
+
+  /*pop up*/
+  .popped {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 120px;  
+    border: 4px solid black;
+  }
+
 }
+
+/* Small Devices, Tablets  */
+@media only screen and (min-width : 768px) {
+  #my-work {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: white;
+  }
+
+  /*images*/
+  .my-apps div > a > img {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    padding: 0px;
+    margin: 0 auto;
+    top: 50px;
+    border: 2px solid black;
+  }
+
+
+  /*app title*/ 
+  .my-apps > div > p {
+    position: relative;
+    top: 70px;
+    font-family: 'Raleway',sans-serif; 
+    font-size: 32px; 
+    font-weight: 800;
+  }
+
+    /*coming soon*/
+  .my-apps > div > span > p {
+    position: relative;
+    top: 50px;
+    color: black;
+    font-size: 16px;
+    font-weight: none;
+  }
+    /*images*/
+  .mock-ups > div > div > img {
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+  }
+
+  .mock-ups > h2 {
+    position: relative;
+    top: 90px;
+  }
+
+  .blur {
+    -webkit-filter: blur(6px);
+    -mox-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    background: #000000;
+    opacity: 0.7px;
+  }
+
+  /*pop up*/
+  .popped {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 120px;  
+    border: 4px solid black;
+    left: 0px;
+  }
+
+}
+
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+  #my-work {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: white;
+  }
+
+  /*images*/
+  .my-apps div > a > img {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    padding: 0px;
+    /*margin: 0 auto;*/
+    top: 50px;
+    border: 2px solid black;
+  }
+
+
+  /*app title*/ 
+  .my-apps > div > p {
+    position: relative;
+    top: 70px;
+    font-family: 'Raleway',sans-serif; 
+    font-size: 32px; 
+    font-weight: 800;
+  }
+
+    /*coming soon*/
+  .my-apps > div > span > p {
+    position: relative;
+    top: 50px;
+    color: black;
+    font-size: 16px;
+    font-weight: none;
+  }
+
+  .mock-ups > div > div > img {
+    font-weight: bold;
+    position: relative;
+    top: 100px;
+    cursor: pointer;
+  }
+
+  .mock-ups > h2 {
+    position: relative;
+    top: 90px;
+  }
+
+  .blur {
+    -webkit-filter: blur(6px);
+    -mox-filter: blur(6px);
+    -o-filter: blur(6px);
+    filter: blur(6px);
+    background: #000000;
+    opacity: 0.7px;
+  }
+
+  /*pop up*/
+  .popped {
+    width: 50%;
+    z-index: 1;
+    position: fixed;
+    left: 25%;
+    top: 120px;  
+    border: 4px solid black;
+  }
 
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+
+
 
 }
 
@@ -310,3 +516,9 @@ div > p > span {
   color: #ECFFC8;
   /*border-bottom: 2px #fff solid;*/
 }
+
+
+
+
+
+
