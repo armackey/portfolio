@@ -3,8 +3,9 @@ var app = express();
 var path = require('path');
 
 app.use(express.static('client'));
-app.use(require('./photoApiRoutes'));
-// app.use(express.static(path.join(path.normalize(__dirname + 'client'))));
+
+app.use(require('./githubApi'));
+
 app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
