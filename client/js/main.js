@@ -1,16 +1,4 @@
 $(document).ready(function() {
-  var words = $('#bio > p');
-  var transform = ["transform", "msTransform", "webkitTransform", "mozTransform", "oTransform"];
-  
-
-  function getSupportedPropertyName(properties) {
-      for (var i = 0; i < properties.length; i++) {
-          if (typeof document.body.style[properties[i]] != "undefined") {
-              return properties[i];
-          }
-      }
-      return null;
-  }
   animateDiv();
   function makeNewPosition($container) {
 
@@ -57,27 +45,5 @@ $(document).ready(function() {
 
   }
 
-  // function randomNum() {
-  //   return Math.floor(Math.random() * 5);
-  // }
-
-  // words.each(function() { 
-  //   var transformProperty = getSupportedPropertyName(transform);
-  //   var randomX = randomNum();
-  //   var randomY = randomNum();
-  //   console.log(transformProperty);
-  //   $(this).animate({
-  //       'opacity': '320'
-  //   }, {
-  //       step: function (now, fx) {
-  //         $(this).css({transform: "translate3d(" + randomX * now + "px, " + randomY * now + "px," + "0px)"});
-
-  //       },
-  //       duration: 10000,
-  //       easing: 'linear',
-  //       queue: false
-  //   }, 'linear');
-  
-  // });
 
 });
