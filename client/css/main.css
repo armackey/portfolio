@@ -1,104 +1,30 @@
 body {
   width: 100%;
 }
-@media (max-width: 400px) {
-  /*thanks for checking out my page...*/
-  #bio > p {
-    line-height: 22px;
-    letter-spacing: 1px;
-    top: 120px;
-    position: relative;
-    margin: 0px 20px;
-    color: white;
-    font-size: 17px;
-    font-family: 'Alice', serif;
-  }
+#bio {
+  height: 500px;
+  display: inline;
+  width: 200px;
+}
+#full-stack {
+  color: white;
+}
 
- #firstname {
-   color: #5C4D14;
-   font-family: Gill Sans, Verdana;
-   font-size: 81px;
-   line-height: 14px;
-   letter-spacing: 2px;
-   font-weight: bold;
-   position: relative;
-   margin-right: 10px;
-   top: 40px;
-  }
+#bio > p {
+  display: inline;
+}
+#projects-list > table {
+  display: inline;
+}
 
-  #lastname {
-    text-transform: uppercase;
-    color: #7FFF56;
-    font-size: 81px;
-    opacity: .2;
-    position: relative;
-    left: -3px;
-    top: 24px;
-  }
-
-  #projects > ul > li{
-/*    list-style: none;
-    position: relative;
-    top: -360px;*/
-    white-space: nowrap;
-  }
-
-  .img {
-    position: relative;
-    top: -385px;
-    text-align: center;
-  }
-
-
-  /*my tool box*/
-  #toolbox {
-    left: 0px;
-    width: 350px;
-  }
-
-  #projects-list {
-    left: 13px;
-    width: 300px;
-  }
-  #professional-ex { 
-    left: 13px;
-    width: 300px;
-  }
-  #professional-ex > p {
-    width: 100px;
-  }
-  #professional-ex > p:first-child {
-    left: -90px;
-  }
-
-  table {
-    border-collapse:separate;
-    border-spacing:20px 1px;
-  }
-  table > tbody > tr > td {
-    left: -20px;
-    font-size: 18px;
-    position: relative;
-    margin-right: 10px;
-  }
-
-  #projects > .img > a > img {
-    width: 315px;
-    height: 280px;
-    display: inherit;
-    position: relative;
-    top: 40px;
-  }
-
-
-  #projects {
-    width: 100%;
-  }
-  #projects > a {
-    position: relative;
-    top: -340px;
-  }
-
+#professional-ex {
+  z-index: 3;
+  height: 85px;
+  opacity: .8;
+  background: white;
+  position: absolute;
+  top: 517px;
+  width: 350px;
 }
 
 #firstname {
@@ -113,14 +39,14 @@ body {
   top: 40px;
  }
 
- #lastname {
-   text-transform: uppercase;
-   color: #7FFF56;
-   font-size: 81px;
-   opacity: .2;
-   position: relative;
-   left: -3px;
-   top: 24px;
+#lastname {
+  text-transform: uppercase;
+  color: #7FFF56;
+  font-size: 81px;
+  opacity: .2;
+  position: relative;
+  left: -3px;
+  top: 24px;
  }
 
  #bio > p {
@@ -130,112 +56,342 @@ body {
    position: relative;
    margin: 0px 20px;
    color: white;
-   font-size: 17px;
+   font-size: 20px;
    font-family: 'Alice', serif;
  }
 
- /*my tool box*/
+ .first-layer {
+   width: 100%;
+   height: 500px;
+   background: #1C1D1B;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+ }
 
 
-/*@media (min-width: 480px) { 
-  #bio > p {
-    max-width: 400px;
+
+
+
+ p > span {
+   text-decoration: line-through;
+ }
+
+ #professional-ex  > p:first-child {
+   font-size: 30px;
+   float: right;
+   margin-right: 10px;
+   text-transform: uppercase;
+   display: inline;
+   position: relative;
+   top: -27px;
+ }
+
+ #company {
+   margin-left: 36px;
+   display: inline;
+   font-size: 22px;
+   color: #BA4A30;
+   position: relative;
+   font-family: Gill Sans, Verdana;
+   top: 38px;
+ }
+
+ #date {
+   font-size: 17px;
+   color: #BA4A30;
+   font-family: Gill Sans, Verdana;
+   position: relative;
+   top: 17px;
+   left: 184px;
+   display: inline;
+ }
+
+
+ #toolbox {
+  z-index: 3;
+  height: 160px;
+  opacity: .8;
+  background: white;
+  position: absolute;
+  top: 632px;
+  width: 344px;
+  right: 10px; 
+}
+
+ #projects-list {
+  z-index: 3;
+  height: 100px;
+  opacity: .8;
+  background: white;
+  position: absolute;
+  top: 821px;
+  width: 350px;
+ }
+
+ #projects-list > p {
+   font-size: 30px;
+   float: right;
+   margin-right: 10px;
+   text-transform: uppercase;
+   position: relative;
+   top: -27px;
+ }
+
+ #projects-list > table {
+   position: relative;
+   width: 100%;
+   top: -55px;
+ }
+
+
+ #green-left {
+   background: #7FFF56;
+   width: 40%;
+   height: 437px;
+   position: absolute;
+   display: inline;
+   top: 500px;
+   left: 0px;
+ }
+
+ table {
+   margin-left: 30px;
+   font-size: 22px;
+   color: #BA4A30;
+   font-family: Gill Sans, Verdana;
+ }
+
+ #black-right {
+   background: #4c4c4c;
+   background: -moz-linear-gradient(45deg,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #111111 67%, #111111 67%, #000000 70%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+   background: -webkit-linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#111111 67%,#111111 67%,#000000 70%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); 
+   background: linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#111111 67%,#111111 67%,#000000 70%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); 
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); 
+   width: 60%;
+   height: 437px;
+   position: absolute;
+   top: 500px;
+   right: 0;
+ }
+
+
+
+ #toolbox > p {
+   font-size: 30px;
+   margin-left: 10px;
+   text-transform: uppercase;
+   position: relative;
+   top: -27px;
+ }
+
+ #toolbox > table {
+   position: relative;
+   top: -52px;
+   left: -7px;
+ }
+
+
+
+
+
+
+
+/*@media (max-width: 768px) { 
+  #lastname {
+    left: -177px;
+    top: 96px;
   }
 
-  #projects > ul { 
-    position: relative;
+  #professional-ex {
+
   }
 
-  #bio > #lastname { 
-    top: 48px;
-    left: 20px;
-    display: inline;
+  #toolbox {
+    width: 460px;
   }
 
-  .overlay {
-    left: 5%;
-    position: absolute;
-    top: 8px;
-  }
-
-  
-
-}*/
-@media (min-width: 480px) { 
-  img {
-    max-width: 100%;
-  }
-  #firstname, #lastname {
-    left: 10%;
-  }
-
-  .img {
-    position: relative;
-    top: -350px;
-  }
-
-  #projects > a {
-    top: -340px;
+  #toolbox > table > tbody > tr > td {
     font-size: 22px;
-    position: relative;
-
   }
 
-  table {
+  #toolbox > table {
+    border-collapse:separate;
+    border-spacing:28px 1px;
+  }
+
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (max-width: 580px) { 
+  #toolbox {
+    left: 30px;
+    width: 450px;
+  }
+ #toolbox > table {
     border-collapse:separate;
     border-spacing:20px 1px;
   }
+  table > tbody > tr > td {
+    left: 0px;
+    position: relative;
+    margin-right: 10px;
 
-  td {
-    font-size: 15px;
   }
+
 }
+*/
 
-@media (max-width: 480px) { 
-  img {
-    max-width: 100%;
+@media (min-width: 100px) { 
+  td, #company, #date {
+    font-size: 16px;
   }
-
-  .img {
-    position: relative;
-    top: -350px;
-  }
-
-  #projects > a {
-    top: -312px;
-    font-size: 22px;
-    position: relative;
+  #company {
 
   }
+  #toolbox > table > tbody > tr > td {
+    left:0px;
+  }
 
-  table {
+  table  {
     border-collapse:separate;
-    border-spacing:20px 1px;
+    border-spacing:20px 3px;
   }
 
-  td {
-    font-size: 15px;
+  table > tbody > tr > td {
+    position: relative;
+    margin-right: 10px;
   }
+
+  #full-stack {
+    text-align: center;
+    position: relative; 
+    top: 20px;
+    font-size: 24px;
+  }
+
 }
+
+
+@media (min-width: 400px) {
+
+  #toolbox {
+    left: 30px;
+    width: 380px;
+  }
+
+  td, #company, #date {
+    font-size: 17px;
+  }
+
+  #projects-list {
+    left: 13px;
+    width: 300px;
+  }
+
+
+  #professional-ex > p:first-child {
+    left: -90px;
+  }
+
+  #toolbox > table > tbody > tr > td {
+    font-size: 16px;
+    left: -20px;
+  }
+
+  #projects-list > table > tbody > tr > td {
+    font-size: 16px;
+    left: -20px;
+  }
+
+  #toolbox > table {
+    border-collapse:separate;
+    border-spacing:30px 1px;
+  }
+
+/*  table > tbody > tr > td {
+    left: 0px;
+    position: relative;
+    margin-right: 10px;
+
+  }*/
+
+}
+
+
+
+
+
 
 @media (min-width: 768px) { 
   .overlay {
     left: 10%;
   }
+
+  td, #company, #date {
+    font-size: 23px !important;
+  }
+
+  #projects-list {
+    left: 8%;
+    width: 400px;
+    height: 107px;
+  }
+
+  #professional-ex {
+    left: 6%
+  }
+
+  #full-stack {
+    font-size: 40px;
+  }
+
+  #company{
+    width: 300px;
+    display: inline-block;
+    top: -73px;
+  }
+
+  #date{
+    width: 300px;
+    display: inline-block;
+    top: -145px;
+  }
+
   #toolbox {
-    left: 200px;
+    left: 30%;
     width: 500px;
   }
+
+  #toolbox > table {
+    left: 18px;
+  }
+
   table {
     border-collapse:separate;
-    border-spacing:20px 1px;
+    border-spacing:28px 1px;
   }
-  td {
-    font-size: 20px;
+
+  #firstname {
+    font-size: 112px;
   }
-  #projects > a {
-    left: 15%;
-  }
+
 
 }
 
@@ -247,207 +403,4 @@ body {
   }
 
 
-  .img {
-    text-align: center;
-  }
-  #projects > a {
-    left: 20%;
-  }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-.first-layer {
-  width: 100%;
-  height: 500px;
-  background: #1C1D1B;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-
-
-#professional-ex {
-  z-index: 3;
-  height: 109px;
-  opacity: .8;
-  background: white;
-  position: absolute;
-  top: 517px;
-}
-
-p > span {
-  text-decoration: line-through;
-}
-
-#professional-ex  > p:first-child {
-  font-size: 30px;
-  float: right;
-  margin-right: 10px;
-  text-transform: uppercase;
-  display: inline;
-  position: relative;
-  top: -27px;
-}
-
-#company {
-  margin-left: 36px;
-  display: inline;
-  font-size: 22px;
-  color: #BA4A30;
-  position: relative;
-  font-family: Gill Sans, Verdana;
-  top: 38px;
-}
-
-#date {
-  font-size: 17px;
-  color: #BA4A30;
-  font-family: Gill Sans, Verdana;
-  position: relative;
-  top: 41px;
-  left: 165px;
-  display: inline;
-}
-
-
-#toolbox {
-  z-index: 3;
-  height: 160px;
-  opacity: .8;
-  background: white;
-  position: absolute;
-  top: 632px;
-}
-
-#projects-list {
-  z-index: 3;
-  height: 100px;
-  opacity: .8;
-  background: white;
-  position: absolute;
-  top: 797px;
-}
-
-#projects-list > p {
-  font-size: 30px;
-  float: right;
-  margin-right: 10px;
-  text-transform: uppercase;
-  position: relative;
-  top: -27px;
-}
-
-#projects-list > table {
-  position: relative;
-  top: -55px;
-}
-
-
-#green-left {
-  background: #7FFF56;
-  width: 40%;
-  height: 504px;
-  position: absolute;
-  display: inline;
-  top: 500px;
-  left: 0px;
-}
-
-table {
-  margin-left: 30px;
-  font-size: 22px;
-  color: #BA4A30;
-  font-family: Gill Sans, Verdana;
-}
-
-#black-right {
- 
-  background: #4c4c4c;
-  background: -moz-linear-gradient(45deg,  #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #111111 67%, #111111 67%, #000000 70%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
-  background: -webkit-linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#111111 67%,#111111 67%,#000000 70%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); 
-  background: linear-gradient(45deg,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#111111 67%,#111111 67%,#000000 70%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); 
-  width: 60%;
-  height: 505px;
-  position: relative;
-  top: 449px;
-  float: right;
-  left: -8px;
-}
-
-#projects > p:first-child  {
-  padding-top: 50px;
-}
-
-#toolbox > p {
-  font-size: 30px;
-  margin-left: 10px;
-  text-transform: uppercase;
-  position: relative;
-  top: -27px;
-}
-
-#toolbox > table {
-  position: relative;
-  top: -52px;
-}
-
-#projects {
-  background-color: #1C3B38;
-  position: relative;
-  top: 954px;
-  left: -8px;
-}
-
-#projects > p {
-  font-size: 50px;
-  font-family: 'Alice', serif;
-  white-space: nowrap;
-  color: white
-}
-
-#projects > p:nth-child(n+2) {
-  position: relative;
-  top: -300px;
-}
-
-#projects > ul {
-  list-style: none;
-}
-
-
-
-#projects > ul > li {
-  color: #FAEBD7;
-  font-size: 22px
-}
-
-#projects > ul > li:before {
-  content: "-";
-}
-
-
-a {
-  text-decoration: none;
-  color: white;
-  z-index: 10;
-}
-
-#projects > a {
-  text-align: center;
-  margin-left: 39px;
-}
-
-

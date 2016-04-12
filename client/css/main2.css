@@ -1,9 +1,229 @@
-/*@media (max-width: 360px) {
-  .first-layer {
-    max-width: 400px;
-    width: 100%;
-    background-color: blue;
-    height: 300px;
+#projects {
+  background-color: #1C3B38;
+  position: absolute;
+  top: 937px;
+  left: 0px;
+  width: 100%;
+}
+#projects > p {
+  font-size: 50px;
+  font-family: 'Alice', serif;
+  white-space: nowrap;
+  color: white;
+  margin: 40px 0px 15px 10px;
+  position: relative;
+  /*left: 10px;*/
+}
 
+#projects > a:last-child {
+  margin-bottom: 50px;
+}
+
+#projects > a {
+  text-decoration: none;
+  color: white;
+  z-index: 10;
+  position: relative;
+  float: right;
+  right: 10px;
+  /*margin-bottom: 15px;*/
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  max-width: 900px;
+}
+
+.img {
+  position: relative;
+  top: 0px;
+  text-align: center;
+}
+
+#projects > a {
+  top: 0px;
+  font-size: 22px;
+  position: relative;
+}
+
+#projects > ul > li{
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) { 
+
+  #projects > a {
+    font-size: 24px;
+    right: 10px;
   }
-}*/
+
+}
+
+
+@media (min-width: 960px) { 
+
+  #projects > a {
+    font-size: 24px;
+    right: 85px;
+    position: relative;
+  }
+
+  #projects > p { 
+    left: 12%;
+    display: inline;
+  }
+
+}
+
+@media (min-width: 1126px) {
+  #projects > a {
+    position: relative;
+    right: 185px;
+  }
+}
+
+
+@media (max-width: 480px) { 
+
+
+}
+
+
+@media (max-width: 400px) {
+
+
+
+
+
+/*  #projects > .img > a > img {
+    width: 315px;
+    height: 280px;
+    display: inherit;
+    position: relative;
+    top: 40px;
+  }*/
+
+
+/*  #projects > a {
+    position: relative;
+    top: -340px;
+
+  }*/
+
+}
+
+/* 
+
+
+
+ #projects > p:nth-child(n+2) {
+   position: relative;
+   top: -300px;
+ }
+
+ #projects > ul {
+   list-style: none;
+ }
+
+
+
+ #projects > ul > li {
+   color: #FAEBD7;
+   font-size: 22px
+ }
+
+ #projects > ul > li:before {
+   content: "-";
+ }
+
+
+
+
+ #projects > a {
+   text-align: center;
+   margin-left: 39px;
+ }
+
+
+
+
+ @media (max-width: 400px) {
+
+
+   #projects > ul > li{
+     white-space: nowrap;
+   }
+
+   .img {
+     position: relative;
+     top: -385px;
+     text-align: center;
+   }
+
+
+   #projects > .img > a > img {
+     width: 315px;
+     height: 280px;
+     display: inherit;
+     position: relative;
+     top: 40px;
+   }
+
+   #projects {
+     max-width: 400px;
+   }
+
+
+   #projects > a {
+     position: relative;
+     top: -340px;
+
+   }
+
+ }
+
+
+
+
+ @media (min-width: 480px) { 
+   img {
+     max-width: 100%;
+   }
+
+   .img {
+     position: relative;
+     top: -350px;
+   }
+
+   #projects > a {
+     top: -340px;
+     font-size: 22px;
+     position: relative;
+
+   }
+
+ }
+
+
+
+
+
+
+
+ @media (min-width: 960px) {
+
+   .overlay {
+     left: 15%;
+   }
+
+
+   .img {
+     text-align: center;
+   }
+   #projects > a {
+     left: 20%;
+   }
+
+ }
+*/
